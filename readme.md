@@ -15,3 +15,6 @@
 - npm i cors
 - npm i --save-dev @types/express
 - npm i --save-dev @types/node
+- npm i mongoose
+- npm install dotenv
+- npm i jsonwebtoken --save
