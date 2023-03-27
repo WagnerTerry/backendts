@@ -5,7 +5,6 @@ const dotenv = require('dotenv')
 dotenv.config()
 const express = require('express')
 const cors = require('cors')
-const PORT: Number = 3000;
 const mongoose = require('mongoose')
 
 // middleware
@@ -19,7 +18,6 @@ app.get("/health", (req: Request, res: Response) => {
 })
 
 // connection
-
 if (process.env.DB_DEV === "devs") {
     console.log("conectado ambiente dev")
     mongoose.connect("mongodb://localhost:27017/mercado_juca",
