@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 const express = require('express')
 const cors = require('cors')
+const products = require('./routes/products')
 const mongoose = require('mongoose')
 
 // middleware
@@ -16,6 +17,8 @@ app.use(express.json())
 app.get("/health", (req: Request, res: Response) => {
     res.status(200).send({ message: "api ok" })
 })
+app.use("/products", products)
+
 
 // connection
 if (process.env.DB_DEV === "devs") {
