@@ -18,3 +18,4 @@
 - npm i mongoose
 - npm install dotenv
 - npm i jsonwebtoken --save
+- npm i -D @types/node@17.0.41
