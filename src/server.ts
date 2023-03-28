@@ -45,7 +45,6 @@ if (process.env.DB_DEV === "devs") {
         .catch((error: string) => console.log(error))
 }
 
-
 // app.listen(PORT, () => {
 //     console.log(`server is running on port ${PORT}`)
 // })
