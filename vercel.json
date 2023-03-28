@@ -1,17 +1,15 @@
 {
-    "name": "vercel-typescript-backendts-api",
     "version": 2,
-    "public": true,
     "builds": [
         {
-            "src": "./server.ts",
+            "src": "src/server.ts",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "(.*)",
+            "dest": "src/server.ts"
         }
     ]
 }
