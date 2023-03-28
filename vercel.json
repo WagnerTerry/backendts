@@ -1,8 +1,10 @@
 {
+    "name": "vercel-typescript-backendts-api",
     "version": 2,
+    "public": true,
     "builds": [
         {
-            "src": "dist/src/server.js",
+            "src": "src/server.ts",
             "use": "@vercel/node"
         }
     ],
