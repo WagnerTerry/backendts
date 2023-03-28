@@ -58,4 +58,16 @@ router.put("/:id", async (req: Request, res: Response) => {
     }
 })
 
+router.delete("/:id", async (req: Request, res: Response) => {
+    const id = req.params.id
+
+    try {
+        await Product.deleteOne({_id: id})
+
+        res.status(202).json({message: "Produto removido com sucesso"})
+    } catch(error){
+        res.status(500).json({error})
+    }
+})
+
 module.exports = router
