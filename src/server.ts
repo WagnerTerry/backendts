@@ -6,6 +6,8 @@ dotenv.config()
 const express = require('express')
 const cors = require('cors')
 const products = require('./routes/products')
+const tasks = require('./routes/tasks')
+
 const mongoose = require('mongoose')
 
 // middleware
@@ -18,6 +20,7 @@ app.get("/health", (req: Request, res: Response) => {
     res.status(200).send({ message: "api ok" })
 })
 app.use("/products", products)
+app.use("/tasks", tasks)
 
 
 // connection
