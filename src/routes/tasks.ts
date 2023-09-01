@@ -14,14 +14,13 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 })
 
 router.post("/", async (req: Request, res: Response) => {
-    const { id, title, completed } = req.body
+    const { title, completed } = req.body
 
     if (!title) {
         res.status(422).json({ message: "Campo title é obrigatório" })
     }
 
     const task = {
-        id,
         title,
         completed
     }
