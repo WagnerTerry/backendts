@@ -1,14 +1,17 @@
-const mongoose = require('mongoose')
+import { Category } from "../enum";
 
-const Product = mongoose.model('Product', {
-    name: String,
-    description: String,
-    price: String,
-    image: String,
-    createdAt: {
-        type: Date,
-        default: Date.now()
-    }
-})
+const mongoose = require("mongoose");
 
-module.exports = Product
+const Product = mongoose.model("Product", {
+  name: String,
+  description: String,
+  price: String,
+  image: String,
+  category: String,
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
+});
+
+module.exports = Product;
